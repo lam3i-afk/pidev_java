@@ -6,29 +6,20 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MyDatabase {
-
-    private final String url = "jdbc:mysql://localhost:3306/esport-db";
-    private final String user = "root";
-    private final String password = "";
-
-    private Connection connection;
     private static MyDatabase instance;
+    private Connection connection;
+
+    private static final String URL = "jdbc:mysql://localhost:3306/esport-db";
+    private static final String USER = "root";
+    private static final String PASSWORD = ""; // ton mot de passe
 
     private MyDatabase() {
         try {
-            // Charger driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            connection = DriverManager.getConnection(url, user, password);
-            System.out.println("✅ Connected to database !");
-        } catch (Exception e) {
-            System.out.println("❌ Database connection failed !");
-            e.printStackTrace();
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Connexion réussie ");
+        } catch (SQLException e) {
+            System.out.println(" Erreur connexion : " + e.getMessage());
         }
-    }
-
-    public Connection getConnection() {
-        return connection;
     }
 
     public static MyDatabase getInstance() {
@@ -38,22 +29,7 @@ public class MyDatabase {
         return instance;
     }
 
-    // Vérifier connexion
-    public boolean isConnected() {
-        try {
-            return connection != null && !connection.isClosed();
-        } catch (SQLException e) {
-            return false;
-        }
-    }
-
-    // Test réel SQL
-    public boolean testConnection() {
-        try (Statement stmt = connection.createStatement()) {
-            stmt.execute("SELECT 1");
-            return true;
-        } catch (SQLException e) {
-            return false;
-        }
+    public Connection getConnection() {
+        return connection;
     }
 }

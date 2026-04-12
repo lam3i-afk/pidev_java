@@ -65,6 +65,8 @@ public class HomeController {
     }
 
 
+
+
     // ── helpers ──────────────────────────────────────────
 
     private void loadScene(ActionEvent event, String fxml, String title) throws IOException {

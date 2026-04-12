@@ -1,0 +1,67 @@
+package tn.esprit.controllers;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Control;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class NavbarController {
+
+    @FXML
+    private void goToHome(ActionEvent event) {
+        try {
+            loadScene(event, "/home.fxml", "Home");
+        } catch (IOException e) {
+            System.out.println("Unable to open home.");
+        }
+    }
+
+    @FXML
+    private void goToTournement(ActionEvent event) {
+        try {
+            loadScene(event, "/tournement.fxml", "Tournoi");
+        } catch (IOException e) {
+            System.out.println("Unable to open tournement.");
+        }
+    }
+
+    @FXML
+    private void goToAbout(ActionEvent event) {
+        try {
+            loadScene(event, "/about.fxml", "Blog");
+        } catch (IOException e) {
+            System.out.println("Unable to open blog.");
+        }
+    }
+
+    @FXML
+    private void goToMain(ActionEvent event) {
+        try {
+            loadScene(event, "/main.fxml", "Dashboard");
+        } catch (IOException e) {
+            System.out.println("Unable to open dashboard.");
+        }
+    }
+
+    @FXML
+    private void goToUser(ActionEvent event) {
+        try {
+            loadScene(event, "/ProfileUser.fxml", "Profile User");
+        } catch (IOException e) {
+            System.out.println("Unable to open profile.");
+        }
+    }
+
+    private void loadScene(ActionEvent event, String fxml, String title) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxml));
+        Stage stage = (Stage) ((Control) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle(title);
+        stage.show();
+    }
+}

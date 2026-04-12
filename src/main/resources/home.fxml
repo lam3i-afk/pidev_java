@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -13,36 +12,8 @@
     <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background: #05070f; -fx-background-color: #05070f;" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <content>
             <VBox style="-fx-background-color: #05070f;">
-
                 <!-- NAVBAR -->
-                <BorderPane prefHeight="82.0" style="-fx-background-color: #000000; -fx-border-color: rgba(255,255,255,0.06); -fx-border-width: 0 0 1 0;">
-                    <left>
-                        <HBox alignment="CENTER_LEFT" spacing="12.0" BorderPane.alignment="CENTER">
-                            <padding><Insets left="36.0" /></padding>
-                            <VBox spacing="-2.0">
-                                <Label style="-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;" text="ESPORTS" />
-                                <Label style="-fx-text-fill: #cfd5df; -fx-font-size: 10px;" text="COMMUNITY" />
-                            </VBox>
-                        </HBox>
-                    </left>
-                    <center>
-                        <HBox alignment="CENTER" spacing="28.0">
-                            <Button onAction="#goToHome" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Home" />
-                            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Jeux" />
-                            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Team" />
-                            <Button onAction="#goToTournement" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Tournoi" />
-                            <Button onAction="#goToAbout" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Blog" />
-                            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="LIVE" />
-                            <Button onAction="#goToMain" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Products" />
-                        </HBox>
-                    </center>
-                    <right>
-                        <HBox alignment="CENTER_RIGHT" spacing="16.0" BorderPane.alignment="CENTER">
-                            <padding><Insets right="34.0" /></padding>
-                            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text=" Profile User" />
-                        </HBox>
-                    </right>
-                </BorderPane>
+                <fx:include source="Navbar.fxml" />
 
                 <!-- HERO SECTION -->
                 <StackPane prefHeight="638.0">

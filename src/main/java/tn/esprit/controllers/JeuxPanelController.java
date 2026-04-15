@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.Cursor;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -50,6 +51,20 @@ public class JeuxPanelController implements Initializable {
 
     private static final double CARD_W = 350;
     private static final double IMG_H = 132;
+    private static final String CARD_STYLE =
+            "-fx-background-color: #151f38;"
+                    + "-fx-background-radius: 12;"
+                    + "-fx-border-color: rgba(124,58,237,0.45);"
+                    + "-fx-border-radius: 12;"
+                    + "-fx-border-width: 1;"
+                    + "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 14, 0.2, 0, 4);";
+    private static final String CARD_STYLE_HOVER =
+            "-fx-background-color: #1a2747;"
+                    + "-fx-background-radius: 12;"
+                    + "-fx-border-color: rgba(167,139,250,0.75);"
+                    + "-fx-border-radius: 12;"
+                    + "-fx-border-width: 1.3;"
+                    + "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.62), 20, 0.24, 0, 6);";
 
     @FXML
     private FlowPane cardsContainer;
@@ -154,14 +169,7 @@ public class JeuxPanelController implements Initializable {
         VBox card = new VBox(0);
         card.setPrefWidth(CARD_W);
         card.setMaxWidth(CARD_W);
-        card.setStyle(
-                "-fx-background-color: #151f38;"
-                        + "-fx-background-radius: 12;"
-                        + "-fx-border-color: rgba(124,58,237,0.45);"
-                        + "-fx-border-radius: 12;"
-                        + "-fx-border-width: 1;"
-                        + "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 14, 0.2, 0, 4);"
-        );
+        card.setStyle(CARD_STYLE);
 
         StackPane imgStack = new StackPane();
         imgStack.setPrefSize(CARD_W, IMG_H);
@@ -237,7 +245,28 @@ public class JeuxPanelController implements Initializable {
         );
 
         card.getChildren().addAll(imgStack, titleBox, details);
+        configureCardInteraction(card, jeu);
         return card;
+    }
+
+    private void configureCardInteraction(VBox card, Jeu jeu) {
+        card.setCursor(Cursor.HAND);
+        card.setOnMouseEntered(e -> card.setStyle(CARD_STYLE_HOVER));
+        card.setOnMouseExited(e -> card.setStyle(CARD_STYLE));
+        card.setOnMouseClicked(e -> showJeuDetails(jeu));
+    }
+
+    private void showJeuDetails(Jeu jeu) {
+        Alert info = new Alert(Alert.AlertType.INFORMATION);
+        info.setTitle("Détails du jeu");
+        info.setHeaderText(jeu.getNom() == null ? "Jeu" : jeu.getNom());
+        info.setContentText(
+                "Genre: " + emptyAsDash(jeu.getGenre()) + "\n"
+                        + "Plateforme: " + emptyAsDash(jeu.getPlateforme()) + "\n"
+                        + "Statut: " + emptyAsDash(jeu.getStatut()) + "\n"
+                        + "Description: " + emptyAsDash(jeu.getDescription())
+        );
+        info.showAndWait();
     }
 
     private static String ribbonLabelFor(Jeu jeu) {

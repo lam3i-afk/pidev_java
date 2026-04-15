@@ -8,6 +8,11 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/ProductDetailsController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ProductDetails.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/JeuxPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/JeuxPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoiCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoiCatalogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/utils/MyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/utils/MyDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tournoiDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tournoiDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AfficherProduitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AfficherProduitsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterProduitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/ProduitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/ProduitsController.java" afterDir="false" />
@@ -68,6 +73,8 @@
     "JUnit.ProductServiceTest.testPrixNegatif.executor": "Run",
     "JUnit.ProductServiceTest.testStockZero.executor": "Run",
     "JUnit.ProductServiceTest.testUpdateProduct.executor": "Run",
+    "JUnit.ServiceJeuTest.executor": "Run",
+    "JUnit.ServiceTournoiTest.executor": "Run",
     "JUnit.ServiceUserTest.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -138,19 +145,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceBlogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceJeuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkshopJDBC-JavaFX-3A56" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServiceBlogTest" />
+      <option name="MAIN_CLASS_NAME" value="ServiceJeuTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pidev" />
+    <configuration name="ServiceTournoiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopJDBC-JavaFX-3A56" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServiceUserTest" />
+      <option name="MAIN_CLASS_NAME" value="ServiceTournoiTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,17 +166,17 @@
     <list>
       <item itemvalue="Application.FxLauncher" />
       <item itemvalue="Application.MainFX" />
+      <item itemvalue="JUnit.ServiceJeuTest" />
+      <item itemvalue="JUnit.ServiceTournoiTest" />
       <item itemvalue="JUnit.ProductServiceTest" />
-      <item itemvalue="JUnit.ServiceUserTest" />
-      <item itemvalue="JUnit.ServiceBlogTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.FxLauncher" />
+        <item itemvalue="JUnit.ServiceTournoiTest" />
+        <item itemvalue="JUnit.ServiceJeuTest" />
         <item itemvalue="Application.MainFX" />
         <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="JUnit.ServiceUserTest" />
-        <item itemvalue="JUnit.ServiceBlogTest" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +205,7 @@
       <workItem from="1776126702741" duration="1533000" />
       <workItem from="1776128852842" duration="1269000" />
       <workItem from="1776170825743" duration="7074000" />
+      <workItem from="1776281266801" duration="3589000" />
       <workItem from="1776266895271" duration="12248000" />
     </task>
     <servers />

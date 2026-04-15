@@ -8,6 +8,8 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Alert;
+import javafx.scene.Cursor;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Region;
@@ -28,6 +30,12 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 public class TournoiCatalogController implements Initializable {
+    private static final String CARD_STYLE =
+            "-fx-background-color: #1e2d4a; -fx-background-radius: 10; -fx-border-radius: 10; "
+                    + "-fx-border-color: rgba(167,139,250,0.35); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 12, 0.15, 0, 4);";
+    private static final String CARD_STYLE_HOVER =
+            "-fx-background-color: #26365f; -fx-background-radius: 10; -fx-border-radius: 10; "
+                    + "-fx-border-color: rgba(167,139,250,0.80); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.48), 16, 0.2, 0, 6);";
 
     @FXML
     private FlowPane cardsContainer;
@@ -149,9 +157,32 @@ public class TournoiCatalogController implements Initializable {
         card.setPrefWidth(350);
         card.setMaxWidth(350);
         card.setMinHeight(238);
-        card.setStyle("-fx-background-color: #1e2d4a; -fx-background-radius: 10; -fx-border-radius: 10; "
-                + "-fx-border-color: rgba(167,139,250,0.35); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 12, 0.15, 0, 4);");
+        card.setStyle(CARD_STYLE);
+        configureCardInteraction(card, t);
         return card;
+    }
+
+    private void configureCardInteraction(VBox card, Tournoi tournoi) {
+        card.setCursor(Cursor.HAND);
+        card.setOnMouseEntered(e -> card.setStyle(CARD_STYLE_HOVER));
+        card.setOnMouseExited(e -> card.setStyle(CARD_STYLE));
+        card.setOnMouseClicked(e -> showTournoiDetails(tournoi));
+    }
+
+    private void showTournoiDetails(Tournoi tournoi) {
+        Alert info = new Alert(Alert.AlertType.INFORMATION);
+        info.setTitle("Détails du tournoi");
+        info.setHeaderText(tournoi.getNom() == null ? "Tournoi" : tournoi.getNom());
+        info.setContentText(
+                "Jeu: " + jeuNoms.getOrDefault(tournoi.getJeuId(), "N/A") + "\n"
+                        + "Type: " + normalizeTypeLabel(tournoi.getType()) + "\n"
+                        + "Statut: " + normalizeStatusLabel(tournoi.getStatut()) + "\n"
+                        + "Date début: " + formatDate(tournoi.getDateDebut()) + "\n"
+                        + "Date fin: " + formatDate(tournoi.getDateFin()) + "\n"
+                        + "Max participants: " + tournoi.getMaxParticipants() + "\n"
+                        + "Cagnotte: " + formatMoney(tournoi.getCagnotte())
+        );
+        info.showAndWait();
     }
 
     private void updateHeaderStats() {

@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-public class TournoisController implements Initializable {
+public class TournoiDashboardController implements Initializable {
 
     @FXML
     private TableView<Tournoi> tournoisTable;

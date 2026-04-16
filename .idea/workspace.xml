@@ -9,13 +9,32 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/entities/Stream.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceStream.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/stream.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ServiceJeuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ServiceTournoiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create_tables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterMatchGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterMatchGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/AjouterUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/JeuxPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/JeuxPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/NavbarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/NavbarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoiCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoiCatalogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/controllers/TournoiDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceBlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AfficherBlogs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AfficherBlogs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AjouterBlog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AjouterBlog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Blogs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Blogs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Navbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ajouterMatchGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ajouterMatchGame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ajouterUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ajouterUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tournoiDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tournoiDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ServiceBlogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ServiceBlogTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,45 +73,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FxLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainBlog.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainFX.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainProduitCategorie.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testAddProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testDeleteProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testGetAllProducts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testGetProductById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testPrixNegatif.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testStockZero.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTest.testUpdateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ServiceUserTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ToolWindow.AIAssistant.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp2/htdocs/pidev_java/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AcpAgentsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FxLauncher.executor": "Run",
+    "Application.MainBlog.executor": "Run",
+    "Application.MainFX.executor": "Run",
+    "Application.MainProduitCategorie.executor": "Run",
+    "JUnit.CategoryServiceTest.executor": "Run",
+    "JUnit.EquipeTest.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.testAddProduct.executor": "Run",
+    "JUnit.ProductServiceTest.testDeleteProduct.executor": "Run",
+    "JUnit.ProductServiceTest.testGetAllProducts.executor": "Run",
+    "JUnit.ProductServiceTest.testGetProductById.executor": "Run",
+    "JUnit.ProductServiceTest.testPrixNegatif.executor": "Run",
+    "JUnit.ProductServiceTest.testStockZero.executor": "Run",
+    "JUnit.ProductServiceTest.testUpdateProduct.executor": "Run",
+    "JUnit.ServiceUserTest (1).executor": "Run",
+    "JUnit.ServiceUserTest.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ToolWindow.AIAssistant.ShowToolbar": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "Merging main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/xampp2/htdocs/pidev_java/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.AcpAgentsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\pidev_java\src\main\resources" />
@@ -107,7 +128,7 @@
       <recent name="tn.esprit.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainFX">
+  <component name="RunManager" selected="JUnit.MatchGameTest">
     <configuration name="FxLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tn.esprit.test.FxLauncher" />
       <module name="WorkshopJDBC-JavaFX-3A56" />
@@ -125,7 +146,7 @@
     <configuration name="MainFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tn.esprit.test.MainFX" />
       <module name="WorkshopJDBC-JavaFX-3A56" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Mouhamed Tayssir\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar;C:\Users\Mouhamed Tayssir\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar;C:\Users\Mouhamed Tayssir\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar;C:\Users\Mouhamed Tayssir\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar;C:\Users\Mouhamed Tayssir\.m2\repository\org\openjfx\javafx-media\21.0.2\javafx-media-21.0.2-win.jar&quot; --add-modules javafx.controls,javafx.fxml,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\rajhi\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar;C:\Users\rajhi\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar;C:\Users\rajhi\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar;C:\Users\rajhi\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar;C:\Users\rajhi\.m2\repository\org\openjfx\javafx-media\21.0.2\javafx-media-21.0.2-win.jar&quot; --add-modules javafx.controls,javafx.fxml,javafx.media" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tn.esprit.test.*" />
@@ -136,26 +157,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pidev" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceBlogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkshopJDBC-JavaFX-3A56" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServiceBlogTest" />
+      <option name="MAIN_CLASS_NAME" value="EquipeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pidev" />
+    <configuration name="MatchGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopJDBC-JavaFX-3A56" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MatchGameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceUserTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopJDBC-JavaFX-3A56" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServiceUserTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -166,17 +187,17 @@
     <list>
       <item itemvalue="Application.FxLauncher" />
       <item itemvalue="Application.MainFX" />
-      <item itemvalue="JUnit.ProductServiceTest" />
-      <item itemvalue="JUnit.ServiceUserTest" />
-      <item itemvalue="JUnit.ServiceBlogTest" />
+      <item itemvalue="JUnit.EquipeTest" />
+      <item itemvalue="JUnit.MatchGameTest" />
+      <item itemvalue="JUnit.ServiceUserTest (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MatchGameTest" />
+        <item itemvalue="JUnit.EquipeTest" />
         <item itemvalue="Application.MainFX" />
+        <item itemvalue="JUnit.ServiceUserTest (1)" />
         <item itemvalue="Application.FxLauncher" />
-        <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="JUnit.ServiceUserTest" />
-        <item itemvalue="JUnit.ServiceBlogTest" />
       </list>
     </recent_temporary>
   </component>

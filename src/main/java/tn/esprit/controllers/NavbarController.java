@@ -58,6 +58,15 @@ public class NavbarController {
     }
 
     @FXML
+    private void goToTeam(ActionEvent event) {
+        try {
+            loadScene(event, "/equipe/afficherEquipe.fxml", "Team");
+        } catch (IOException e) {
+            System.out.println("Unable to open team.");
+        }
+    }
+
+    @FXML
     private void goToAbout(ActionEvent event) {
         try {
             loadScene(event, "/AfficherBlogs.fxml", "Blogs");

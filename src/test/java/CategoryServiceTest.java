@@ -84,6 +84,6 @@ public class CategoryServiceTest {
                 .filter(cat -> cat.getName().equals("TestCategory")
                         || cat.getName().equals("CategoryModifiee"))
                 .forEach(cat -> service.deleteCategory(cat.getId()));
-        System.out.println("🧹 Nettoyage terminé");
+        System.out.println("Nettoyage terminé");
     }
 }

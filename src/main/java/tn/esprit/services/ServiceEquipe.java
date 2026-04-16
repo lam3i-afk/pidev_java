@@ -1,7 +1,9 @@
 package tn.esprit.services;
 
 import  tn.esprit.entities.Equipe;
+import  tn.esprit.entities.User;
 import  tn.esprit.utils.MyDatabase;
+import  tn.esprit.utils.SessionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,13 +22,31 @@ public class ServiceEquipe implements IService<Equipe> {
 
     @Override
     public void ajouter(Equipe equipe) throws SQLException {
-        String sql = "INSERT INTO equipe(nom, max_members, logo, owner_id) VALUES (?, ?, ?, 10)";
+        String sql = "INSERT INTO equipe(nom, max_members, logo, owner_id) VALUES (?, ?, ?, ?)";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, equipe.getNom());
             ps.setInt(2, equipe.getMaxMembers());
             ps.setString(3, equipe.getLogo());
+            ps.setInt(4, resolveOwnerId());
             ps.executeUpdate();
         }
+    }
+
+    private int resolveOwnerId() throws SQLException {
+        User currentUser = SessionManager.getCurrentUser();
+        if (currentUser != null && currentUser.getId() > 0) {
+            return currentUser.getId();
+        }
+
+        String fallbackSql = "SELECT id FROM `user` ORDER BY id ASC LIMIT 1";
+        try (Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(fallbackSql)) {
+            if (rs.next()) {
+                return rs.getInt("id");
+            }
+        }
+
+        throw new SQLException("Aucun utilisateur trouve pour owner_id. Creez un utilisateur puis reessayez.");
     }
 
     @Override

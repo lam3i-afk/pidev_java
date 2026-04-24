@@ -71,10 +71,10 @@
                 <Separator HBox.hgrow="ALWAYS"/>
             </HBox>
 
-            <!-- Sign up with Google -->
-            <Button text="G   Sign up with Google"
+            <!-- Sign in with Google -->
+            <Button text="G   Sign in with Google"
                     maxWidth="Infinity" onAction="#handleGoogleSignUp"
-                    style="-fx-background-color: #1a1a2e; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 13 0; -fx-cursor: hand;"/>
+                    style="-fx-background-color: #4285f4; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 13 0; -fx-cursor: hand;"/>
 
             <Label fx:id="messageLabel" text=""
                    style="-fx-font-size: 12px; -fx-wrap-text: true;"/>

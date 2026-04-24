@@ -118,7 +118,7 @@
             <!-- Sign up with Google -->
             <Button text="G   Sign up with Google"
                     maxWidth="Infinity" onAction="#handleGoogleSignUp"
-                    style="-fx-background-color: #1a1a2e; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 13 0; -fx-cursor: hand;"/>
+                    style="-fx-background-color: #4285f4; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 13 0; -fx-cursor: hand;"/>
 
             <!-- Message Label (single, no duplicate) -->
             <Label fx:id="messageLabel" text=""

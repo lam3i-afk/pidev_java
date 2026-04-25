@@ -60,6 +60,10 @@ public class MainController implements Initializable {
     public void showBlogs() {
         loadPage("/Blogs.fxml");
     }
+    @FXML
+    public void showStatistiques() {
+        loadPage("/statistiques.fxml");
+    }
 
     @FXML
     public void showHome() {

@@ -60,6 +60,10 @@ public class MainController implements Initializable {
     public void showBlogs() {
         loadPage("/Blogs.fxml");
     }
+    @FXML
+    public void showStatistiques() {
+        loadPage("/statistiques.fxml");
+    }
 
     @FXML
     public void showHome() {
@@ -72,6 +76,10 @@ public class MainController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void showOrders() {
+        loadPage("/orders.fxml");
     }
     @FXML
     private void showStream() {

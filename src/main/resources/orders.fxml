@@ -61,6 +61,7 @@
             <TableColumn fx:id="colCity" text="City" prefWidth="100"/>
             <TableColumn fx:id="colPhone" text="Phone" prefWidth="120"/>
             <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+
         </columns>
     </TableView>
 

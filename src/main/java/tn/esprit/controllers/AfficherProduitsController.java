@@ -1,5 +1,6 @@
 package tn.esprit.controllers;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +15,7 @@ import tn.esprit.entities.Category;
 import tn.esprit.entities.Product;
 import tn.esprit.services.CartService;
 import tn.esprit.services.CategoryService;
+import tn.esprit.services.CurrencyService;
 import tn.esprit.services.ProductService;
 
 import java.io.File;
@@ -28,7 +30,10 @@ public class AfficherProduitsController implements Initializable {
     @FXML private TextField searchField;
     @FXML private Button prevBtn, nextBtn;
     @FXML private Label pageLabel;
-
+    @FXML private ComboBox<String> currencyCombo;
+    @FXML private Label rateLabel;
+    private CurrencyService currencyService = new CurrencyService();
+    private String selectedCurrency = "TND";
     private static final int PRODUCTS_PER_PAGE = 6; // ← produits par page
     private int currentPage = 0;
     private List<Product> currentProducts;
@@ -45,6 +50,17 @@ public class AfficherProduitsController implements Initializable {
         allCategories = categoryService.getAllCategories();
         loadCategoryButtons();
         displayProducts(allProducts);
+        // ✅ Charger les devises
+        currencyCombo.setItems(FXCollections.observableArrayList(
+                "TND", "EUR", "USD", "GBP"
+        ));
+        currencyCombo.setValue("TND");
+
+// ✅ Changer devise
+        currencyCombo.setOnAction(e -> {
+            selectedCurrency = currencyCombo.getValue();
+            showPage(); // recharger les cartes
+        });
     }
 
     private void loadCategoryButtons() {
@@ -126,7 +142,16 @@ public class AfficherProduitsController implements Initializable {
         HBox footer = new HBox(10);
         footer.setAlignment(Pos.CENTER_LEFT);
 
-        Label priceLabel = new Label(String.format("%.2f TND", p.getPrice()));
+        String priceText;
+        if (selectedCurrency.equals("TND")) {
+            priceText = String.format("%.2f TND", p.getPrice());
+        } else {
+            double converted = currencyService.convertFromTND(p.getPrice(), selectedCurrency);
+            priceText = converted > 0
+                    ? String.format("%.2f %s", converted, selectedCurrency)
+                    : String.format("%.2f TND", p.getPrice());
+        }
+        Label priceLabel = new Label(priceText);
         priceLabel.setStyle(
                 "-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1e293b;"
         );

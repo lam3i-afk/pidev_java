@@ -33,6 +33,16 @@
                     style="-fx-background-color: #f1f5f9; -fx-font-size: 16px;
                            -fx-pref-height: 46px; -fx-pref-width: 50px;
                            -fx-cursor: hand; -fx-background-radius: 0 8 8 0;"/>
+            <!-- DEVISE SELECTOR -->
+            <HBox spacing="10" alignment="CENTER_LEFT"
+                  style="-fx-padding: 0 0 10 0;">
+                <Label text="💱 Devise :"
+                       style="-fx-text-fill: #94a3b8; -fx-font-size: 13px;"/>
+                <ComboBox fx:id="currencyCombo"
+                          style="-fx-background-color: #1e293b; -fx-pref-height: 35px;"/>
+                <Label fx:id="rateLabel" text=""
+                       style="-fx-text-fill: #7c3aed; -fx-font-size: 12px;"/>
+            </HBox>
         </HBox>
     </VBox>
 

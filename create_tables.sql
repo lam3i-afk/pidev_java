@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     is_2fa_enabled BOOLEAN NOT NULL DEFAULT FALSE,
     google_oauth_id VARCHAR(255),
     oauth_provider VARCHAR(100),
+    profile_image_url TEXT,
     face_encoding TEXT,
     is_face_enabled BOOLEAN NOT NULL DEFAULT FALSE
 );

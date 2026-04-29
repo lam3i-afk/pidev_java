@@ -36,12 +36,25 @@
                                     <StackPane prefHeight="140.0" prefWidth="140.0">
                                         <Circle fill="transparent" radius="56.0" stroke="#6e5cff" strokeWidth="4.0" />
                                         <Circle fill="#111427" radius="44.0" />
+                                        <ImageView fx:id="avatarImageView" fitHeight="88.0" fitWidth="88.0" managed="false" pickOnBounds="true" preserveRatio="true" visible="false" />
                                         <Label fx:id="avatarLabel" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="UP" />
                                     </StackPane>
 
                                     <Label fx:id="nameLabel" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: 800;" text="User Name" />
 
                                     <Label fx:id="emailLabel" style="-fx-text-fill: #8d93a8; -fx-font-size: 17px;" text="user@email.com" />
+
+                                    <VBox alignment="CENTER" spacing="8.0">
+                                        <Button fx:id="uploadPhotoButton" onAction="#handleUploadPhoto"
+                                                style="-fx-background-color: linear-gradient(to right, #4f6bff, #8a4dff);
+                                                       -fx-background-radius: 999;
+                                                       -fx-text-fill: white;
+                                                       -fx-font-size: 13px;
+                                                       -fx-font-weight: 700;
+                                                       -fx-padding: 8 18 8 18;
+                                                       -fx-cursor: hand;" text="UPLOAD PHOTO" />
+                                        <Label fx:id="profileImageStatusLabel" style="-fx-text-fill: #8d93a8; -fx-font-size: 13px;" text="Profile picture not uploaded" />
+                                    </VBox>
 
                                     <Label fx:id="roleBadgeLabel" style="-fx-background-color: linear-gradient(to right, #6f62ff, #9a58ff);
                                                        -fx-background-radius: 999;
